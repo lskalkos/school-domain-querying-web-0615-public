@@ -84,8 +84,8 @@ describe Department do
     it 'returns an instance of department that matches the name from the DB' do
       comp_sci = Department.new
       comp_sci.name = "Computer Science"
-      
       comp_sci.insert
+
 
       comp_sci_from_db = Department.find_by_name("Computer Science")
       expect(comp_sci_from_db.name).to eq("Computer Science")
